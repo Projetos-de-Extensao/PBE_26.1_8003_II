@@ -44,4 +44,4 @@ controle e validação das horas complementares, automatizando processos que
 tradicionalmente são realizados de forma manual. Plataformas desse tipo viabilizam o
 acompanhamento do progresso do aluno, além da geração de relatórios e integração
 com sistemas institucionais, contribuindo para maior eficiência administrativa.
-Exemplos: NOTION E TRELLO
+Exemplos: SIGAA e SEI 
