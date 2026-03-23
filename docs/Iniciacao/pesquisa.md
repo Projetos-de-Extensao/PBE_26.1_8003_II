@@ -4,14 +4,8 @@ title: Pesquisa
 ---
 
 # Pesquisa
-## Pesquisa
-### Pesquisa
 
-Pesquisa realizada para compreensão das principais características do Aplicativo de **Streaming**.
-
-> Dorothy followed her through many of the beautiful rooms in her castle.
-
-LEIS
+## LEIS
 
 A Lei de Diretrizes e Bases da Educação Nacional (LDB) estabelece as bases legais da
 educação brasileira e atribui ao Ministério da Educação a responsabilidade pela
@@ -27,7 +21,7 @@ adquiridas em contextos diversos, não se confundindo com estágio supervisionad
 trabalho de conclusão de curso. Cabe às instituições de ensino definir critérios próprios
 de validação, acompanhamento e aproveitamento dessas atividades.
 
-REGULAMENTO IBMEC
+## REGULAMENTO IBMEC
 
 No âmbito institucional, o Ibmec regulamenta as Atividades Acadêmicas
 Complementares (AAC) como componentes curriculares necessários à integralização do
@@ -36,7 +30,7 @@ formação acadêmica e profissional, prevendo a realização de atividades dist
 em eixos temáticos definidos pela própria instituição. Também explicita que estágio
 obrigatório e TCC não são contabilizados como AAC.
 
-APLICATIVOS
+## APLICATIVOS
 
 Paralelamente, observa-se o desenvolvimento de soluções tecnológicas voltadas à
 gestão dessas atividades. Aplicativos e sistemas acadêmicos permitem o registro,
