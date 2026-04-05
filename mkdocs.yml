@@ -6,13 +6,6 @@ copyright: Copyright ©️ 2025, Jonh Carvalho
 
 nav: 
   - Home: index.md
-  - Disciplina:
-      - Aulas: Disciplina/aulas.md
-      - Ambiente: Disciplina/ambiente.md
-      - Github: Disciplina/github.md
-      - Mkdocs: Disciplina/mkdocs.md
-      - CodeSpace: Disciplina/codespace.md
-      - Avaliações: Disciplina/avaliacoes.md
   - Iniciação: 
       - Index: Iniciacao/index.md
       - Pesquisa: Iniciacao/pesquisa.md
@@ -93,8 +86,7 @@ markdown_extensions:
       permalink: true
 
 plugins:
-  - minify:
-      minify_html: true
+  
   - search
 
 theme:

@@ -38,4 +38,32 @@ controle e validação das horas complementares, automatizando processos que
 tradicionalmente são realizados de forma manual. Plataformas desse tipo viabilizam o
 acompanhamento do progresso do aluno, além da geração de relatórios e integração
 com sistemas institucionais, contribuindo para maior eficiência administrativa.
-Exemplos: SIGAA e SEI 
+
+
+Essas Plataformas Oferecem Funcionalidades como o envio digital de comprovantes 
+categorização automatica das atividades (cursos, eventos, monitorias, extensões,
+entre outros), validação por responnsáveis institucionais e armazenamento seguro
+das informações. Além disso, viabilizam o acompanhamento em tempo real do progresso
+do aluno em relação ás horas exigidas pelo curso, permitindo maior autonomia e
+organização academica. Outro ponto relevante é a geração de relatórios detalhados,
+que auxiliam tanto os estudantes quanto os gestores acadêmicos na análise do
+cumprimento das atividades complementares. Esses sistemas também podem ser
+integrados a outros ambientes institucionais, como portais do aluno, sistemas
+de matrícula e plataformas de ensino, contribuindo para maior eficiência administrativa
+e redução de erros operacionais.
+
+Como exemplos práticos, destaca-se o SIGAA, amplamente utilizado em universidades
+públicas brasileiras, que permite ao aluno submeter atividades complementares,
+acompanhar o status de aprovação e visualizar o total de horas já contabilizadas.
+O sistema também possibilita que professores e coordenadores analisem e validem
+as atividades diretamente na plataforma.
+
+Outro exemplo é o SEI, utilizado principalmente na administração pública,
+mas também adotado por instituições de ensino para tramitação de processo
+acadêmicos. No contexto das atividades complementares, o SEI pode ser
+utilizado para formalizar solicitações, anexar documentos comprobatórios
+e acompanhar o andamento dos processos de validação de forma digital e transparente.
+
+Além desses, existem outras soluções, como plataformas próprias desenvolvidas
+por instituições ou sistemas integrados a ambientes virtuais de aprendizagem,
+que ampliam ainda mais as possibilidades de gestão acadêmica digital.
