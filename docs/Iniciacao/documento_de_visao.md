@@ -2,86 +2,102 @@
 id: documento_de_visao
 title: Documento de Visão
 ---
+
 ## Introdução
 
 <p align = "justify">
-O propósito deste documento é fornecer uma visão geral sobre o projeto que será realizado na disciplina Arquitetura e Desenho de Software 2020/1, na Universidade de Brasília. Sendo assim, Nesse documento serão descritas de maneira resumida as principais funcionalidades, usabilidades, o problema que será abordado e os objetivos da equipe.
+O propósito deste documento é fornecer uma visão geral sobre o sistema que será desenvolvido, voltado para a automatização da inserção de alunos em eventos internos. Este documento apresenta de forma resumida as principais funcionalidades, usabilidade, problema abordado e os objetivos da equipe no desenvolvimento da solução.
 </p>
 
 ## Descrição do Problema 
 
 <p align = "justify">
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+Atualmente, o processo de inscrição de alunos em eventos internos é realizado de forma manual ou semi-manual, o que pode gerar erros, retrabalho e dificuldades no gerenciamento das informações. Além disso, a falta de centralização dos dados dificulta o acompanhamento da participação dos alunos e a organização dos eventos.
 </p>
 
 ### Problema
 
-Dificuldade em gerenciar e organizar...
+Dificuldade em gerenciar e organizar a inscrição de alunos em eventos internos de forma eficiente e automatizada.
 
 ### Impactados
 
-Usuários....
+- Alunos participantes dos eventos  
+- Organizadores de eventos  
+- Instituição responsável  
 
 ### Consequência
 
-A criação de novos....
+- Erros em inscrições  
+- Perda de dados ou inconsistência de informações  
+- Aumento do tempo gasto na organização  
+- Dificuldade no controle de მონაწილação  
 
 ### Solução
 
-Utilizar a aplicação que será desenvolvida visando resolver...
+Desenvolver uma aplicação web que automatize o processo de inscrição de alunos em eventos internos, centralizando as informações e facilitando o gerenciamento.
 
 ## Objetivos
 
 <p align = "justify">
-O objetivo da equipe de desenvolvimento é fornecer...
+O objetivo da equipe de desenvolvimento é fornecer um sistema web eficiente, intuitivo e confiável que permita automatizar a inscrição de alunos em eventos internos, melhorar a organização dos dados e reduzir erros operacionais.
 </p>
 
 ## Descrição do Usuário 
 
 <p align = "justify">
-Os usuários serão....
+Os usuários do sistema serão:
 </p>
+
+- Alunos: que desejam se inscrever em eventos  
+- Organizadores: responsáveis por gerenciar os eventos  
+- Administradores: responsáveis pelo controle geral do sistema  
 
 ## Recursos do produto
 
 ### Conta
 
 <p align = "justify">
-O cliente poderá realizar seu cadastro....
+O usuário poderá criar uma conta no sistema, realizar login e gerenciar suas informações pessoais.
 </p>
 
-### Loja
+### Eventos
 
 <p align = "justify">
-O cliente poderá cadastrar uma loja única....
+Os organizadores poderão cadastrar, editar e remover eventos, definindo informações como data, horário, descrição e número de vagas.
 </p>
 
-### Produto
+### Inscrição
 
 <p align = "justify">
-O cliente poderá cadastrar....
+Os alunos poderão se inscrever nos eventos disponíveis de forma rápida e automatizada.
 </p>
 
-### Pesquisa sobre Lojas
+### Gerenciamento
 
 <p align = "justify">
-O cliente poderá pesquisar...
+O sistema permitirá o controle das inscrições, listagem de participantes e acompanhamento dos eventos.
+</p>
+
+### Pesquisa de Eventos
+
+<p align = "justify">
+Os usuários poderão buscar eventos por nome, data ou categoria.
 </p>
 
 ## Restrições
 
 <p align = "justify">
-A aplicação não será responsável...
+A aplicação não será responsável por pagamentos, integração com sistemas externos complexos ou autenticação avançada (como biometria). O sistema será limitado ao escopo acadêmico e poderá depender de conexão com a internet.
 </p>
 
 ## Referências Bibliográficas
 
-> Documento de visão. Disponível em https://www... Acesso em dd/MM/yyYY
+> https://www.ibm.com/docs/pt-br/rational-soft-arch
 
-> Documento de visão. Disponível em  Acesso em dd/MM/yyYY
+> https://www.cin.ufpe.br/~gta/rup-vc/core.base_rup/guidances/artifacts/vision_doc
 
 ## Versionamento
+
 | Data | Versão | Descrição | Autor(es) |
 | -- | -- | -- | -- |
-| DD/MM/YYYY | 1.0 | Criação do documento | XXX XXXX e ZZZ ZZZZ | 
-
+| 08/04/2026 | 1.0 | Criação do documento | Equipe do projeto |
