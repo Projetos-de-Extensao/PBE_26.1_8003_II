@@ -22,15 +22,13 @@ title: 5W2H - Atividades Acadêmicas Complementares
 ### Visão geral
 
 |Questão|Resposta|
-|-------|--------|
-|What? (O que será feito?)|Realização de atividades acadêmicas complementares ao longo do curso|
-|Why? (Por que isso será feito?)|Para enriquecer a formação acadêmica e desenvolver habilidades práticas|
-|Where? (Onde será feito?)|Em ambientes acadêmicos, plataformas online e instituições parceiras|
-|When? (Quando será feito?)|Durante todo o período da graduação|
-|Who? (Quem irá fazer?)|Estudantes, com orientação de professores e coordenação|
-|How? (Como será feito?)|Por meio de cursos, eventos, projetos, estágios e atividades extracurriculares|
-|How much? (Quanto custará?)|Custo variável, podendo incluir apenas tempo e dedicação ou taxas de cursos/eventos|
-
+|What? (O que será feito?)	Criação de um sistema para gerenciar e acompanhar atividades acadêmicas complementares dentro da instituição IBMEC
+|Why? (Por que isso será feito?)	Para otimizar o controle das horas complementares, diminuindo processos manuais e melhorando a organização
+|Where? (Onde será feito?)	O desenvolvimento será realizado remotamente pela equipe e aplicado na instituição IBMEC
+|When? (Quando será feito?)	Ao longo do primeiro semestre de 2026
+|Who? (Quem irá fazer?)	Equipe formada por Miguel, Maria luisa e Bento
+|How? (Como será feito?)	Utilizando metodologia RUP/UP com suporte de tecnologias como Python, Git e VS Code
+|How Much? (Quanto custará?)	O custo será baseado no tempo e dedicação da equipe no desenvolvimento do sistema
 ---
 
 ### Versão 2.0
@@ -39,13 +37,12 @@ title: 5W2H - Atividades Acadêmicas Complementares
 
 |Questão|Resposta|
 |-------|--------|
-|What? (O que será feito?)|Gestão e acompanhamento das atividades acadêmicas complementares|
-|Why? (Por que isso será feito?)|Para organizar, validar e monitorar a carga horária exigida|
-|Where? (Onde será feito?)|Em plataforma digital ou sistema acadêmico|
-|When? (Quando será feito?)|Ao longo do semestre, conforme realização das atividades|
-|Who? (Quem irá fazer?)|Estudantes e coordenação do curso|
-|How? (Como será feito?)|Utilizando um sistema ou aplicativo para registro e validação das atividades|
-|How much? (Quanto custará?)|Baixo custo, envolvendo principalmente tempo de uso e manutenção do sistema|
+|What? (O que será feito?)	Desenvolvimento de um sistema back-end que permita registrar atividades, enviar comprovantes e acompanhar horas acumuladas
+|Why? (Por que isso será feito?)	Para facilitar a gestão e validação das atividades complementares dos alunos de forma mais eficiente
+|Where? (Onde será feito?)	Implementado em um ambiente de servidor back-end
+|When? (Quando será feito?)	Finalizado até o fim do primeiro semestre de 2026
+|Who? (Quem irá fazer?)	Desenvolvido pela equipe do projeto 
+|How Much? (Quanto custará?)	O investimento será relacionado ao esforço técnico e tempo de desenvolvimento da equipe
 
 ## Conclusão
 
