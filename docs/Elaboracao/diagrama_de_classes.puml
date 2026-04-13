@@ -13,7 +13,7 @@ package "Operacional" <<node>> {
 }
 
 package "Regras e Normas" <<database>> {
-    class EixoTematico
+    
     class TipoAtividade
 }
 
