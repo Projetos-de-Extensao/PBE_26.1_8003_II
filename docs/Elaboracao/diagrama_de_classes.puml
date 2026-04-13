@@ -1,0 +1,28 @@
+@startuml DiagramaDeClasses
+
+
+package "Administração de Usuários" <<database>> {
+    class aluno
+    class coordenação 
+}
+
+package "Operacional" <<node>> {
+
+    class atividade_complementar
+
+}
+
+package "Regras e Normas" <<database>> {
+    class EixoTematico
+    class TipoAtividade
+}
+
+aluno --> atividade_complementar : submete
+coordenação <-- atividade_complementar : Analisa
+TipoAtividade --> atividade_complementar : define regras e limites 
+EixoTematico --> TipoAtividade : agrupa
+
+
+
+
+@enduml
