@@ -18,15 +18,21 @@ Professor / Coordenação
 
 ## 🔄 Fluxo Principal
 
-1. Aluno acessa o sistema
-2. Aluno seleciona a opção "Cadastrar Atividade"
-3. Aluno preenche os dados da atividade (nome, carga horária, tipo)
-4. Aluno anexa o comprovante
-5. Sistema valida os dados
-6. Sistema registra a atividade
-7. Sistema define o status como "Pendente"
-8. Sistema exibe confirmação ao aluno
-
+UC01 – Efetuar Autenticação
+Ator: Aluno / Administrador
+Fluxo: Usuário informa suas credenciais → Sistema verifica os dados → Acesso ao sistema é liberado
+UC02 – Registrar Atividade Externa
+Ator: Aluno
+Fluxo: Aluno entra na seção de atividades → Preenche as informações necessárias (categoria, horas, detalhes) → Faz upload do comprovante → Submete para análise
+UC03 – Aprovar ou Reprovar Atividade
+Ator: Administrador
+Fluxo: Admin visualiza atividades em análise → Verifica a documentação enviada → Aprova ou recusa a solicitação → Sistema registra o resultado e atualiza o saldo de horas
+UC04 – Acompanhar Carga Horária
+Ator: Aluno
+Fluxo: Aluno acessa o painel → Sistema apresenta: saldo total de horas, percentual concluído e histórico de atividades registradas
+UC05 – Lançar Atividade Interna
+Ator: Administrador
+Fluxo: Admin cadastra a atividade → Determina a carga horária → Vincula os alunos participantes → Sistema registra as horas automaticamente para cada aluno
 ---
 
 ## 🔁 Fluxos Alternativos

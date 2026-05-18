@@ -8,7 +8,7 @@ title: Design Thinking
 ### **1. Capa**
 
 - Título do Projeto
-- Nome da Equipe
+Bento Couto, Maria Luisa Martinelli, Miguel
 - Data
 - Logo da Empresa/Organização (se aplicável)
 
@@ -16,8 +16,8 @@ title: Design Thinking
 
 ### **2. Introdução**
 
-- **Contexto do Projeto**: Breve descrição do problema ou oportunidade.
-- **Objetivo**: O que se espera alcançar com o projeto.
+- **Contexto do Projeto**: O Projeto visa Solucionar o problema de integração e digitalização de AACs dos alunos do IBMEC, facilitando a troca e controle de informações relevantes para o registro de horas complementares e eventos externos realizados pelos alunos da instituição.
+- **Objetivo**: Se espera substituir o sistema atual, que é a implementação manual de dados relacionados as AACs no sistema, por um sistema digital automatizado.
 - **Público-Alvo**: Quem será impactado pela solução.
 - **Escopo**: Limites e abrangência do projeto.
 

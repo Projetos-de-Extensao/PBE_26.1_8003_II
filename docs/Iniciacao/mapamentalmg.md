@@ -11,6 +11,48 @@ As atividades acadêmicas complementares são ações realizadas pelos estudante
 
 ## Mapa Mental - Geral
 
+```mermaid
+mindmap
+  root((Atividades Acadêmicas Complementares))
+    Ensino
+      Monitoria
+      Projetos de ensino
+      Cursos extracurriculares
+      Oficinas e workshops
+    Pesquisa
+      Iniciação científica
+      Publicação de artigos
+      Congressos
+      Grupos de estudo
+    Extensão
+      Projetos comunitários
+      Voluntariado
+      Ações sociais
+      Eventos abertos
+    Experiência Profissional
+      Estágios
+      Programas trainee
+      Trabalhos na área
+    Desenvolvimento Pessoal
+      Cursos de idiomas
+      Cursos online
+      Soft skills (comunicação, liderança, trabalho em equipe)
+    Certificações e Eventos
+      Palestras
+      Seminários
+      Simpósios
+      Certificados
+```
+
+## Versão 1.0
+---
+id: mapa_mental_atividades
+title: Mapa Mental - Atividades Acadêmicas Complementares
+---
+
+
+## Mapa Mental - Geral
+
 ## Versão 1.0
 
 ### 🧠 Atividades Acadêmicas Complementares
