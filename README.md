@@ -3,7 +3,7 @@
 **Código da Disciplina**: IBM8936<br>
 
 ## Sobre 
-Descreva o seu projeto em linhas gerais. 
+Projeto desenvolvido para a disciplina/projeto de extensão PBE 26.1 8003 II. O sistema tem como objetivo fornecer funcionalidades para cadastro, gerenciamento e consulta de conteúdos, utilizando uma API desenvolvida em Python/Django. 
 
 ## Instalação 
 **Linguagens**: Python, Django<br>
