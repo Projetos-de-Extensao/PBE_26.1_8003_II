@@ -9,6 +9,7 @@ from .models import (
     EixoTematico,
     TipoAtividade,
     AtividadeComplementar,
+    AtividadeInterna,
     Validacao,
 )
 
@@ -154,6 +155,20 @@ class AtividadeComplementarSerializer(serializers.ModelSerializer):
         total = obj.aluno.total_horas_integralizadas
         return round((total / meta) * 100, 2)
 
+class AtividadeInternaSerializer(serializers.ModelSerializer):
+    tipo_atividade = TipoAtividadeSerializer(read_only=True)
+    tipo_atividade_id = serializers.PrimaryKeyRelatedField(
+        queryset=TipoAtividade.objects.all(),
+        source="tipo_atividade",
+        write_only=True
+    )
+
+    participantes = AlunoSerializer(read_only=True, many=True)
+
+    class Meta:
+        model = AtividadeInterna
+        fields = "__all__"
+        read_only_fields = ["criado_em", "participantes"]
 
 class ValidacaoSerializer(serializers.ModelSerializer):
     atividade = AtividadeComplementarSerializer(read_only=True)

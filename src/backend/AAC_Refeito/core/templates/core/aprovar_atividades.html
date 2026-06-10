@@ -1,0 +1,34 @@
+{% extends "core/base.html" %}
+
+{% block content %}
+<section class="card form-card">
+    <h2>Aprovar Atividade</h2>
+
+    <div class="info-box">
+        <p><strong>Aluno:</strong> {{ atividade.aluno }}</p>
+        <p><strong>Descrição:</strong> {{ atividade.descricao }}</p>
+        <p><strong>Carga solicitada:</strong> {{ atividade.carga_horaria_solicitada }}h</p>
+        <p><strong>Status atual:</strong> {{ atividade.status }}</p>
+    </div>
+
+    <form method="post">
+        {% csrf_token %}
+
+        <label>Carga Horária Validada</label>
+        <input
+            type="number"
+            name="carga_horaria_validada"
+            value="{{ atividade.carga_horaria_solicitada }}"
+            required
+        >
+
+        <label>Justificativa/Feedback</label>
+        <textarea name="justificativa"></textarea>
+
+        <div class="actions">
+            <button class="btn" type="submit">Confirmar Aprovação</button>
+            <a class="btn secondary" href="{% url 'dashboard_coordenador' %}">Voltar</a>
+        </div>
+    </form>
+</section>
+{% endblock %}

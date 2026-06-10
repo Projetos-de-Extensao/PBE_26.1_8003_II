@@ -1,0 +1,29 @@
+{% extends "core/base.html" %}
+
+{% block content %}
+<h2>Dashboard da Organização</h2>
+<p>Bem-vindo, {{ request.user.username }}</p>
+
+<div class="actions">
+    <a class="btn" href="{% url 'cadastrar_atividade_interna' %}">
+        Cadastrar Atividade Interna
+    </a>
+</div>
+
+<section>
+    <h3>Atividades Internas Cadastradas</h3>
+
+    <div class="grid">
+        {% for atividade in atividades_internas %}
+            <div class="card">
+                <h4>{{ atividade.titulo }}</h4>
+                <p>{{ atividade.descricao }}</p>
+                <p><strong>Carga horária:</strong> {{ atividade.carga_horaria }}h</p>
+                <p><strong>Tipo:</strong> {{ atividade.tipo_atividade }}</p>
+            </div>
+        {% empty %}
+            <p>Nenhuma atividade interna cadastrada.</p>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends "core/base.html" %}
+
+{% block content %}
+<section class="card login-card">
+    <h2>Login AAC</h2>
+    <p>Acesse o sistema de Atividades Acadêmicas Complementares</p>
+
+    {% if erro %}
+        <p class="error-message">{{ erro }}</p>
+    {% endif %}
+
+    <form method="post">
+        {% csrf_token %}
+
+        <label>Usuário</label>
+        <input type="text" name="username" required>
+
+        <label>Senha</label>
+        <input type="password" name="password" required>
+
+        <div class="actions">
+            <button class="btn" type="submit">Entrar</button>
+        </div>
+    </form>
+</section>
+{% endblock %}

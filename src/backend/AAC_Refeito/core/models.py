@@ -1,6 +1,7 @@
 from django.contrib.auth.models import AbstractUser
 from django.core.validators import MinValueValidator
 from django.db import models
+from django.db.models import Sum
 
 
 class Usuario(AbstractUser):
@@ -167,9 +168,22 @@ class AtividadeComplementar(models.Model):
     def aprovar(self, coordenador, carga_horaria_validada=None, justificativa=""):
         horas = carga_horaria_validada or self.carga_horaria_solicitada
         limite_evento = self.tipo_atividade.limite_horas_por_evento
+        limite_total = self.tipo_atividade.limite_horas_total
+
 
         if horas > limite_evento:
             horas = limite_evento
+
+        horas_acumuladas = AtividadeComplementar.objects.filter(
+            aluno=self.aluno,
+            tipo_atividade=self.tipo_atividade,
+            status=AtividadeComplementar.Status.APROVADO
+        ).aggregate(
+            total=Sum("carga_horaria_validada")
+        )["total"] or 0
+
+        if horas_acumuladas + horas > limite_total:
+            horas = max(limite_total - horas_acumuladas, 0)    
 
         self.status = self.Status.APROVADO
         self.coordenador = coordenador
@@ -211,6 +225,43 @@ class AtividadeComplementar(models.Model):
     def __str__(self):
         return self.descricao[:60]
 
+class AtividadeInterna(models.Model):
+    titulo = models.CharField(max_length=100)
+    descricao = models.TextField(blank=True)
+    carga_horaria = models.PositiveIntegerField()
+    tipo_atividade = models.ForeignKey(
+        TipoAtividade,
+        on_delete=models.CASCADE,
+        related_name="atividades_internas"
+    )
+    organizacao = models.ForeignKey(
+        OrgAcademica,
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=True,
+        related_name="atividades_internas"
+    )
+    coordenador = models.ForeignKey(
+        Coordenador,
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=True,
+        related_name="atividades_internas"
+    )
+    participantes = models.ManyToManyField(
+        Aluno,
+        blank=True,
+        related_name="atividades_internas"
+    )
+    criado_em = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        verbose_name = "Atividade Interna"
+        verbose_name_plural = "Atividades Internas"
+        ordering = ["-criado_em"]
+
+    def __str__(self):
+        return self.titulo
 
 class Validacao(models.Model):
     class Resultado(models.TextChoices):

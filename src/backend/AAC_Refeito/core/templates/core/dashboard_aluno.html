@@ -1,0 +1,70 @@
+{% extends "core/base.html" %}
+
+{% block content %}
+
+{% if messages %}
+  {% for message in messages %}
+    <p>{{ message }}</p>
+  {% endfor %}
+{% endif %}
+
+<h2>Dashboard do Aluno</h2>
+<p>Bem-vindo, {{ request.user.username }}</p>
+
+<section class="card resumo">
+    <h3>Resumo das Horas</h3>
+    <p><strong>Horas integralizadas:</strong> {{ total }}h</p>
+    <p><strong>Meta:</strong> {{ meta }}h</p>
+    <p><strong>Percentual concluído:</strong> {{ percentual }}%</p>
+</section>
+
+<div class="actions">
+    <a class="btn" href="{% url 'cadastrar_atividade_externa' %}">
+        Cadastrar Atividade Externa
+    </a>
+</div>
+
+<section>
+    <h3>Atividades Internas Disponíveis</h3>
+
+    <div class="grid">
+        {% for atividade in atividades_internas %}
+            <div class="card">
+                <h4>{{ atividade.titulo }}</h4>
+                <p>{{ atividade.descricao }}</p>
+                <p><strong>Carga horária:</strong> {{ atividade.carga_horaria }}h</p>
+
+                <form method="post" action="{% url 'participar_atividade_interna' atividade.id %}">
+                    {% csrf_token %}
+                    <button class="btn" type="submit">Participar</button>
+                </form>
+            </div>
+        {% empty %}
+            <p>Nenhuma atividade interna disponível.</p>
+        {% endfor %}
+    </div>
+</section>
+
+<section>
+    <h3>Minhas Atividades Externas</h3>
+
+    <div class="grid">
+        {% for atividade in atividades_externas %}
+            <div class="card">
+                <p><strong>Descrição:</strong> {{ atividade.descricao }}</p>
+                <p><strong>Status:</strong> {{ atividade.status }}</p>
+
+                {% if atividade.carga_horaria_validada %}
+                    <p><strong>Horas validadas:</strong> {{ atividade.carga_horaria_validada }}h</p>
+                {% endif %}
+
+                {% if atividade.status == "REPROVADO" %}
+                    <p><strong>Justificativa:</strong> {{ atividade.feedback }}</p>
+                {% endif %}
+            </div>
+        {% empty %}
+            <p>Você ainda não cadastrou atividades externas.</p>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}

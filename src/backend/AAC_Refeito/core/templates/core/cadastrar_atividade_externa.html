@@ -1,0 +1,29 @@
+{% extends "core/base.html" %}
+
+{% block content %}
+<section class="card form-card">
+    <h2>Cadastrar Atividade Externa</h2>
+
+    <form method="post">
+        {% csrf_token %}
+
+        <label>Descrição</label>
+        <textarea name="descricao" required></textarea>
+
+        <label>Carga Horária Solicitada</label>
+        <input type="number" name="carga_horaria" required>
+
+        <label>Tipo de Atividade</label>
+        <select name="tipo_atividade" required>
+            {% for tipo in tipos %}
+                <option value="{{ tipo.id }}">{{ tipo.nome }}</option>
+            {% endfor %}
+        </select>
+
+        <div class="actions">
+            <button class="btn" type="submit">Cadastrar</button>
+            <a class="btn secondary" href="{% url 'dashboard_aluno' %}">Voltar</a>
+        </div>
+    </form>
+</section>
+{% endblock %}

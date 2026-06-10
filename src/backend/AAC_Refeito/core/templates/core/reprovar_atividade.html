@@ -1,0 +1,26 @@
+{% extends "core/base.html" %}
+
+{% block content %}
+<section class="card form-card">
+    <h2>Reprovar Atividade</h2>
+
+    <div class="info-box">
+        <p><strong>Aluno:</strong> {{ atividade.aluno }}</p>
+        <p><strong>Descrição:</strong> {{ atividade.descricao }}</p>
+        <p><strong>Carga solicitada:</strong> {{ atividade.carga_horaria_solicitada }}h</p>
+        <p><strong>Status atual:</strong> {{ atividade.status }}</p>
+    </div>
+
+    <form method="post">
+        {% csrf_token %}
+
+        <label>Justificativa da Reprovação</label>
+        <textarea name="justificativa" required></textarea>
+
+        <div class="actions">
+            <button class="btn danger" type="submit">Confirmar Reprovação</button>
+            <a class="btn secondary" href="{% url 'dashboard_coordenador' %}">Voltar</a>
+        </div>
+    </form>
+</section>
+{% endblock %}

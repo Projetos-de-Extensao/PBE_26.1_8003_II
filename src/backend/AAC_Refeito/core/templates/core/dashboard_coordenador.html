@@ -1,0 +1,34 @@
+{% extends "core/base.html" %}
+
+{% block content %}
+<h2>Dashboard do Coordenador</h2>
+<p>Bem-vindo, {{ request.user.username }}</p>
+
+<div class="actions">
+    <a class="btn" href="{% url 'cadastrar_atividade_interna' %}">
+        Cadastrar Atividade Interna
+    </a>
+</div>
+
+<section>
+    <h3>Atividades Pendentes</h3>
+
+    <div class="grid">
+        {% for atividade in atividades_pendentes %}
+            <div class="card">
+                <p><strong>Aluno:</strong> {{ atividade.aluno }}</p>
+                <p><strong>Descrição:</strong> {{ atividade.descricao }}</p>
+                <p><strong>Carga solicitada:</strong> {{ atividade.carga_horaria_solicitada }}h</p>
+                <p><strong>Status:</strong> <span class="status pendente">{{ atividade.status }}</span></p>
+
+                <div class="actions">
+                    <a class="btn" href="{% url 'aprovar_atividade' atividade.id %}">Aprovar</a>
+                    <a class="btn danger" href="{% url 'reprovar_atividade' atividade.id %}">Reprovar</a>
+                </div>
+            </div>
+        {% empty %}
+            <p>Nenhuma atividade pendente.</p>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}

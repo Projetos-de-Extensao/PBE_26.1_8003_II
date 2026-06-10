@@ -1,0 +1,32 @@
+{% extends "core/base.html" %}
+
+{% block content %}
+<section class="card form-card">
+    <h2>Cadastrar Atividade Interna</h2>
+
+    <form method="post">
+        {% csrf_token %}
+
+        <label>Título</label>
+        <input type="text" name="titulo" required>
+
+        <label>Descrição</label>
+        <textarea name="descricao"></textarea>
+
+        <label>Carga Horária</label>
+        <input type="number" name="carga_horaria" required>
+
+        <label>Tipo de Atividade</label>
+        <select name="tipo_atividade" required>
+            {% for tipo in tipos %}
+                <option value="{{ tipo.id }}">{{ tipo.nome }}</option>
+            {% endfor %}
+        </select>
+
+        <div class="actions">
+            <button class="btn" type="submit">Cadastrar</button>
+            <a class="btn secondary" href="javascript:history.back()">Voltar</a>
+        </div>
+    </form>
+</section>
+{% endblock %}
