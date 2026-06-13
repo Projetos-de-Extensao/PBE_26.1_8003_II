@@ -1,50 +1,49 @@
-# 📄 Caso de Uso - Cadastro de Atividade Complementar
+#  Caso de Uso - Cadastro de Atividade Externa
 
-## 🎯 Nome
-Cadastrar Atividade Complementar
+##  Nome
+Cadastrar Atividade Externa
 
-## 👤 Ator Principal
+##  Ator Principal
 Aluno
 
-## 👥 Atores Secundários
-Professor / Coordenação
+##  Atores Secundários
+Coordenador
 
 ---
 
-## 📌 Pré-condições
-- O aluno deve estar logado no sistema
+##  Pré-condições
+- O aluno deve estar autenticado no sistema.
+- O aluno deve ter perfil de usuário do tipo ALUNO.
 
 ---
 
-## 🔄 Fluxo Principal
+##  Fluxo Principal
 
-UC01 – Efetuar Autenticação
-Ator: Aluno / Administrador
-Fluxo: Usuário informa suas credenciais → Sistema verifica os dados → Acesso ao sistema é liberado
-UC02 – Registrar Atividade Externa
-Ator: Aluno
-Fluxo: Aluno entra na seção de atividades → Preenche as informações necessárias (categoria, horas, detalhes) → Faz upload do comprovante → Submete para análise
-UC03 – Aprovar ou Reprovar Atividade
-Ator: Administrador
-Fluxo: Admin visualiza atividades em análise → Verifica a documentação enviada → Aprova ou recusa a solicitação → Sistema registra o resultado e atualiza o saldo de horas
-UC04 – Acompanhar Carga Horária
-Ator: Aluno
-Fluxo: Aluno acessa o painel → Sistema apresenta: saldo total de horas, percentual concluído e histórico de atividades registradas
-UC05 – Lançar Atividade Interna
-Ator: Administrador
-Fluxo: Admin cadastra a atividade → Determina a carga horária → Vincula os alunos participantes → Sistema registra as horas automaticamente para cada aluno
+1. O aluno acessa a página de login e informa usuário e senha.
+2. O sistema valida as credenciais e redireciona o aluno para o dashboard.
+3. O aluno seleciona a opção de cadastrar atividade externa.
+4. O aluno preenche a descrição, a carga horária solicitada e o tipo de atividade.
+5. O sistema cria uma Atividade Complementar com status PENDENTE.
+6. O coordenador visualiza a atividade pendente no dashboard do coordenador.
+7. O coordenador aprova ou reprova a atividade externa.
+8. O sistema atualiza o status da atividade e, em caso de aprovação, calcula a carga horária validada.
+
 ---
 
-## 🔁 Fluxos Alternativos
+## Fluxos Alternativos
 
 ### Dados inválidos
-- Sistema solicita correção dos dados
+- Se o aluno enviar descrição ou carga horária inválida, o sistema exibe mensagem de erro e solicita correção.
 
-### Falha no upload
-- Sistema exibe erro e solicita novo envio
+### Usuário não autenticado
+- Se um usuário sem sessão tentar acessar a página de cadastro, ele é redirecionado para a página de login.
+
+### Atividade reprovada
+- Se o coordenador reprovar a atividade, o sistema define o status como REPROVADO, registra a justificativa e não adiciona horas ao aluno.
 
 ---
 
-## ✅ Pós-condições
-- Atividade cadastrada no sistema
-- Atividade aguardando validação
+## Pós-condições
+- A atividade externa fica registrada no sistema com status PENDENTE.
+- O coordenador pode aprovar ou reprovar a solicitação.
+- O total de horas validado do aluno será atualizado somente após aprovação.

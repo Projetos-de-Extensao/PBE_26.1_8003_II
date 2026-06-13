@@ -1,79 +1,85 @@
 ---
 id: dt
-title: Design Thinking
+title: Design Thinking - AAC_Refeito
 ---
 
-## **Design Thinking**
+## 1. Capa
 
-### **1. Capa**
-
-- Título do Projeto
-Bento Couto, Maria Luisa Martinelli, Miguel
-- Data
-- Logo da Empresa/Organização (se aplicável)
-
----
-
-### **2. Introdução**
-
-- **Contexto do Projeto**: O Projeto visa Solucionar o problema de integração e digitalização de AACs dos alunos do IBMEC, facilitando a troca e controle de informações relevantes para o registro de horas complementares e eventos externos realizados pelos alunos da instituição.
-- **Objetivo**: Se espera substituir o sistema atual, que é a implementação manual de dados relacionados as AACs no sistema, por um sistema digital automatizado.
-- **Público-Alvo**: Quem será impactado pela solução.
-- **Escopo**: Limites e abrangência do projeto.
+- Título do Projeto: AAC_Refeito
+- Equipe: Bento Couto, Maria Luisa Martinelli, Miguel
+- Data: 13/06/2026
+- Organização: Projeto Acadêmico IBMEC
 
 ---
 
-### **3. Fases do Design Thinking**
+## 2. Introdução
 
-#### **3.1. Empatia**
-
-- **Pesquisa**: Métodos utilizados para entender o usuário (entrevistas, observação, etc.).
-- **Insights**: Principais descobertas sobre as necessidades, desejos e dores do usuário.
-- **Personas**: Descrição dos perfis de usuários criados com base na pesquisa.
-
-#### **3.2. Definição**
-
-- **Problema Central**: Definição clara do problema a ser resolvido (ex.: "Como podemos...?").
-- **Pontos de Vista (POV)**: Frases que sintetizam as necessidades do usuário e os insights.
-
-#### **3.3. Ideação**
-
-- **Brainstorming**: Lista de ideias geradas pela equipe.
-- **Seleção de Ideias**: Critérios utilizados para escolher as melhores ideias.
-- **Ideias Selecionadas**: Descrição das ideias que serão prototipadas.
-
-#### **3.4. Prototipagem**
-
-- **Descrição do Protótipo**: Como a ideia foi transformada em um protótipo (esboço, modelo físico, digital, etc.).
-- **Materiais Utilizados**: Recursos necessários para criar o protótipo.
-- **Testes Realizados**: Como o protótipo foi testado.
-
-#### **3.5. Teste**
-
-- **Feedback dos Usuários**: O que os usuários acharam do protótipo.
-- **Ajustes Realizados**: Mudanças feitas com base no feedback.
-- **Resultados Finais**: Descrição da solução final.
+- **Contexto do Projeto**: O AAC_Refeito busca digitalizar a gestão de Atividades Acadêmicas Complementares por meio de um backend Django com APIs REST e dashboards web simples.
+- **Objetivo**: Reduzir a burocracia no registro, validação e acompanhamento de atividades complementares dos alunos.
+- **Público-Alvo**: Alunos, coordenadores e organizações acadêmicas que participam do processo de validação das AACs.
+- **Escopo**: Backend Django com autenticação de perfis, cadastro de atividades externas e internas, aprovação/reprovação e cálculo de horas validada.
 
 ---
 
-### **4. Conclusão**
+## 3. Fases do Design Thinking
 
-- **Resultados Obtidos**: O que foi alcançado com o projeto.
-- **Próximos Passos**: O que ainda precisa ser feito ou implementado.
-- **Aprendizados**: Lições aprendidas durante o processo.
+### 3.1. Empatia
+
+- **Pesquisa**: A equipe analisou requisitos de uso de alunos, coordenadores e organizações, identificando itens como registro de atividades, acompanhamento de horas e aprovação de solicitações.
+- **Insights**: Usuários precisam de transparência no status das atividades e de um caminho claro para aprovar ou reprovar solicitações.
+- **Personas**:
+  - Aluno que precisa registrar atividades e acompanhar horas.
+  - Coordenador que valida atividades externas.
+  - Organização acadêmica que cadastra atividades internas.
+
+### 3.2. Definição
+
+- **Problema Central**: Como criar um sistema confiável e centralizado para o controle de Atividades Acadêmicas Complementares?
+- **Pontos de Vista (POV)**:
+  - "O aluno precisa ver suas horas aprovadas sem depender de planilhas."  
+  - "O coordenador precisa aprovar atividades com um fluxo simples."  
+  - "A organização precisa cadastrar e gerenciar atividades internas com clareza."
+
+### 3.3. Ideação
+
+- **Brainstorming**: Foram levantadas ideias de perfis separados, tipos de atividades, status de aprovação e listas de atividades.
+- **Seleção de Ideias**: Priorizou-se a implementação do backend em Django e o uso de APIs REST para permitir a integração futura com um frontend mais completo.
+- **Ideias Selecionadas**:
+  - Dashboard diferenciado para cada perfil.
+  - Modelo de validação para aprovar/reprovar atividades.
+  - Relações entre aluno, atividade, tipo de atividade e eixo temático.
+
+### 3.4. Prototipagem
+
+- **Descrição do Protótipo**: O protótipo foi construído em código com páginas Django e formulários básicos, sem foco em interface visual avançada.
+- **Materiais Utilizados**: Python, Django, Django REST Framework, HTML/CSS e MkDocs para documentação.
+- **Testes Realizados**: Testes manuais de login, cadastro de atividades, participação em atividades internas e aprovação de atividades externas.
+
+### 3.5. Teste
+
+- **Feedback dos Usuários**: A equipe testou internamente os fluxos de aluno, coordenador e organização e ajustou permissões e status.
+- **Ajustes Realizados**: Inclusão do `TipoAtividade`, do cálculo de `total_horas_integralizadas` e do modelo `Validacao` para registrar decisões de aprovação.
+- **Resultados Finais**: Um backend funcional com rotas API e dashboards que suportam os casos de uso essenciais.
 
 ---
 
-### **5. Anexos**
+## 4. Conclusão
 
-- Fotos, gráficos, tabelas, transcrições de entrevistas, etc.
+- **Resultados Obtidos**: Sistema backend operacional para gerenciamento de AACs, com três perfis de usuário e rotas de API.
+- **Próximos Passos**: Melhorar a interface visual, implementar upload de comprovantes nos formulários e adicionar testes automatizados.
+- **Aprendizados**: A equipe aprendeu a modelar usuários e relacionamentos no Django, criar APIs REST e documentar o projeto para deploy.
 
 ---
 
-## **Dicas para Criar o Documento**
+## 5. Anexos
 
-- Use uma linguagem clara e objetiva.
-- Inclua visualizações, como mapas de empatia, jornadas do usuário ou esboços de ideias.
-- Adapte o documento conforme o estágio do projeto (ex.: um documento inicial pode focar mais na pesquisa, enquanto um final pode detalhar a solução).
+- Ver `docs/Elaboracao/diagrama_de_classes.md` e `docs/Elaboracao/casos_de_uso.md` para diagramas e fluxos de uso do AAC_Refeito.
 
-Esse modelo é flexível e pode ser ajustado conforme as necessidades do seu projeto ou da sua equipe. O importante é que o documento reflita o processo colaborativo e iterativo do Design Thinking.
+---
+
+## Dicas
+
+- Use linguagem clara e objetiva.
+- Descreva os fluxos atuais do backend.
+- Relacione cada fase do Design Thinking com as funcionalidades implementadas.
+

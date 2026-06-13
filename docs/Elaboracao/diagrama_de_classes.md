@@ -1,87 +1,107 @@
----
-id: diagrama_de_casos de uso
-title: Diagrama de Casos de Uso
----
+#  Diagrama de Classes - Projeto AAC_Refeito
 
-## Casos de Uso
+## Visão Geral
 
-### Descrição:
+O sistema AAC_Refeito foi modelado com os seguintes principais objetos:
 
-- Contas
-	- Criação
-	- Entrada
-	- Alteração
-	- Recuperar Senha
-	- Exclusão Lógica
-	- Visualização
+- `Usuario` (customizado, herdado de `AbstractUser`)
+- `Aluno`
+- `Coordenador`
+- `OrgAcademica`
+- `EixoTematico`
+- `TipoAtividade`
+- `AtividadeComplementar`
+- `AtividadeInterna`
+- `Validacao`
 
-- Perfis
-	- Edição
-	- Pesquisar
-	- Visualização
-	- Seguir/Deixar de Seguir
+## Diagrama de Classes Simplificado
 
-- Postagens (Público) 	 	
-	- Criação
-	- Exclusão
-	- Interação
-	- Visualização
+```mermaid
+classDiagram
+    class Usuario {
+        +String username
+        +String email
+        +String perfil
+    }
+    class Aluno {
+        +String matricula
+        +String curso
+        +int semestre_ingresso
+        +int total_horas_integralizadas
+        +atualizar_total_horas()
+    }
+    class Coordenador {
+        +String sia_funcionario
+    }
+    class OrgAcademica {
+        +String nome_entidade
+        +String cargo_representante
+    }
+    class EixoTematico {
+        +String nome
+        +String descricao
+    }
+    class TipoAtividade {
+        +String nome
+        +int limite_horas_total
+        +int limite_horas_por_evento
+    }
+    class AtividadeComplementar {
+        +String descricao
+        +Date data_realizacao
+        +int carga_horaria_solicitada
+        +int carga_horaria_validada
+        +String status
+        +String tipo_origem
+        +String caminho_comprovante
+        +String feedback
+        +DateTime criado_em
+        +DateTime atualizado_em
+        +aprovar()
+        +reprovar()
+    }
+    class AtividadeInterna {
+        +String titulo
+        +String descricao
+        +int carga_horaria
+        +DateTime criado_em
+    }
+    class Validacao {
+        +String resultado
+        +int carga_horaria_validada
+        +String justificativa
+        +DateTime data_analise
+    }
 
-- Mensagens (Privado)
-	- Criação
-	- Exclusão
-	- Visualização
+    Usuario <|-- Aluno
+    Usuario <|-- Coordenador
+    Usuario <|-- OrgAcademica
+    Aluno "1" -- "*" AtividadeComplementar : aluno
+    Coordenador "1" -- "*" AtividadeComplementar : coordenador
+    OrgAcademica "1" -- "*" AtividadeComplementar : organizacao
+    TipoAtividade "1" -- "*" AtividadeComplementar : tipo_atividade
+    TipoAtividade "1" -- "*" AtividadeInterna : tipo_atividade
+    OrgAcademica "1" -- "*" AtividadeInterna : organizacao
+    Coordenador "1" -- "*" AtividadeInterna : coordenador
+    Aluno "*" -- "*" AtividadeInterna : participantes
+    AtividadeComplementar "1" -- "1" Validacao : validacao
+```
 
-- Galerias
-	- Albuns
-- Blogs
-- Grupos
+## Descrição das Classes
 
-### Criação de uma conta no sistema
+- `Usuario`: usuário personalizado com o campo `perfil` (ALUNO, COORDENADOR, ORG).
+- `Aluno`: armazena matrícula, curso, semestre e total de horas integralizadas.
+- `Coordenador`: representa o usuário que analisa atividades externas.
+- `OrgAcademica`: representa a organização responsável por cadastrar atividades internas.
+- `EixoTematico`: define uma categoria geral para tipos de atividade.
+- `TipoAtividade`: define limites de horas e pertence a um eixo temático.
+- `AtividadeComplementar`: representa atividades externas solicitadas por alunos e validadas por coordenadores.
+- `AtividadeInterna`: representa atividades lançadas por coordenadores ou organizações e com participantes.
+- `Validacao`: registra resultado, carga validada e justificativa das análises de atividades complementares.
 
-* Atores:
+## Observações
 
-	- Usuário
-	- Sistema
+- O método `Aluno.atualizar_total_horas()` calcula o total de horas aprovadas com base nas atividades complementares com status `APROVADO`.
+- O método `AtividadeComplementar.aprovar()` ajusta a carga validada conforme o limite do tipo de atividade e atualiza o histórico de validação.
+- `AtividadeInterna` tem uma relação de muitos-para-muitos com `Aluno` para registrar participantes.
 
-- Pré-Condições:
-	- Nenhuma
-
-* Fluxo Básico:
-    1. Usuário fornece e-mail, senha e confirmações
-    2. Dados do Usuário são validados pelo Sistema
-    3. Dados do Usuário são encriptados pelo Sistema
-    4. Dados do Usuário são persistidos pelo Sistema
-    5. Sistema gera um link com prazo de expiração
-    6. Sistema envia e-mail de verificação, com o link, para o Usuário
-    7. Usuário confirma o e-mail antes do link expirar
-    8. Sistema confirma que o Cadastro do Usuário foi realizado com sucesso
-    9. Sistema redireciona o Usuário para a página de Entrada
-
-- Fluxos Alternativos:
-	- 2a. E-mail do Usuário é inválido
-		2a1. Sistema exibe mensagem de erro
-	- 2b. Senha do Usuário não respeita regras de segurança
-		- 2b1. Sistema exibe mensagem de erro
-	- 3a. Usuário tenta confirmar o e-mail depois de o link expirar
-		- 3a1. Sistema sugere que o Usuário realize um novo Cadastro
-
-### Entrada do usuário no sistema
-
-- Atores:
-	- Usuário
-	- Sistema
-
-- Pré-Condições:
-	Usuário deve estar cadastrado
-
-- Fluxo Básico:
-    - 1. Usuário fornece e-mail e senha
-	- 2. Sistema autentica o Usuário
-	- 3. Sistema redireciona o Usuário para a página inicial
-
-- Fluxos Alternativos:
-	- 2a. Dados do Usuário Inválidos
-		- 2a1. Sistema exibe mensagem de erro
-	- 3a. Primeio acesso do Usuário
-		- 3a1. Sistema redireciona o Usuário para a página de edição de perfil
