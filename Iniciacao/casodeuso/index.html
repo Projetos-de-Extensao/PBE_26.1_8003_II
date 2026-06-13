@@ -18,7 +18,7 @@
     
     
       
-        <title>📄 Caso de Uso - Cadastro de Atividade Complementar - PBE_25.2_8003</title>
+        <title>Caso de Uso - Cadastro de Atividade Externa - PBE_25.2_8003</title>
       
     
     
@@ -75,7 +75,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#caso-de-uso-cadastro-de-atividade-complementar" class="md-skip">
+        <a href="#caso-de-uso-cadastro-de-atividade-externa" class="md-skip">
           Skip to content
         </a>
       
@@ -108,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              📄 Caso de Uso - Cadastro de Atividade Complementar
+              Caso de Uso - Cadastro de Atividade Externa
             
           </span>
         </div>
@@ -326,7 +326,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../Disciplina/bibliografia.md" class="md-tabs__link">
+      <a href="../../Disciplina/bibliografia/" class="md-tabs__link">
         
   
     
@@ -563,7 +563,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../mapa_mental.md" class="md-nav__link">
+      <a href="../mapamental/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -980,7 +980,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Disciplina/bibliografia.md" class="md-nav__link">
+      <a href="../../Disciplina/bibliografia/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1011,50 +1011,51 @@
   
 
 
-<h1 id="caso-de-uso-cadastro-de-atividade-complementar">📄 Caso de Uso - Cadastro de Atividade Complementar<a class="headerlink" href="#caso-de-uso-cadastro-de-atividade-complementar" title="Permanent link">&para;</a></h1>
-<h2 id="nome">🎯 Nome<a class="headerlink" href="#nome" title="Permanent link">&para;</a></h2>
-<p>Cadastrar Atividade Complementar</p>
-<h2 id="ator-principal">👤 Ator Principal<a class="headerlink" href="#ator-principal" title="Permanent link">&para;</a></h2>
+<h1 id="caso-de-uso-cadastro-de-atividade-externa">Caso de Uso - Cadastro de Atividade Externa<a class="headerlink" href="#caso-de-uso-cadastro-de-atividade-externa" title="Permanent link">&para;</a></h1>
+<h2 id="nome">Nome<a class="headerlink" href="#nome" title="Permanent link">&para;</a></h2>
+<p>Cadastrar Atividade Externa</p>
+<h2 id="ator-principal">Ator Principal<a class="headerlink" href="#ator-principal" title="Permanent link">&para;</a></h2>
 <p>Aluno</p>
-<h2 id="atores-secundarios">👥 Atores Secundários<a class="headerlink" href="#atores-secundarios" title="Permanent link">&para;</a></h2>
-<p>Professor / Coordenação</p>
+<h2 id="atores-secundarios">Atores Secundários<a class="headerlink" href="#atores-secundarios" title="Permanent link">&para;</a></h2>
+<p>Coordenador</p>
 <hr />
-<h2 id="pre-condicoes">📌 Pré-condições<a class="headerlink" href="#pre-condicoes" title="Permanent link">&para;</a></h2>
+<h2 id="pre-condicoes">Pré-condições<a class="headerlink" href="#pre-condicoes" title="Permanent link">&para;</a></h2>
 <ul>
-<li>O aluno deve estar logado no sistema</li>
+<li>O aluno deve estar autenticado no sistema.</li>
+<li>O aluno deve ter perfil de usuário do tipo ALUNO.</li>
 </ul>
 <hr />
-<h2 id="fluxo-principal">🔄 Fluxo Principal<a class="headerlink" href="#fluxo-principal" title="Permanent link">&para;</a></h2>
-<p>UC01 – Efetuar Autenticação
-Ator: Aluno / Administrador
-Fluxo: Usuário informa suas credenciais → Sistema verifica os dados → Acesso ao sistema é liberado
-UC02 – Registrar Atividade Externa
-Ator: Aluno
-Fluxo: Aluno entra na seção de atividades → Preenche as informações necessárias (categoria, horas, detalhes) → Faz upload do comprovante → Submete para análise
-UC03 – Aprovar ou Reprovar Atividade
-Ator: Administrador
-Fluxo: Admin visualiza atividades em análise → Verifica a documentação enviada → Aprova ou recusa a solicitação → Sistema registra o resultado e atualiza o saldo de horas
-UC04 – Acompanhar Carga Horária
-Ator: Aluno
-Fluxo: Aluno acessa o painel → Sistema apresenta: saldo total de horas, percentual concluído e histórico de atividades registradas
-UC05 – Lançar Atividade Interna
-Ator: Administrador
-Fluxo: Admin cadastra a atividade → Determina a carga horária → Vincula os alunos participantes → Sistema registra as horas automaticamente para cada aluno</p>
+<h2 id="fluxo-principal">Fluxo Principal<a class="headerlink" href="#fluxo-principal" title="Permanent link">&para;</a></h2>
+<ol>
+<li>O aluno acessa a página de login e informa usuário e senha.</li>
+<li>O sistema valida as credenciais e redireciona o aluno para o dashboard.</li>
+<li>O aluno seleciona a opção de cadastrar atividade externa.</li>
+<li>O aluno preenche a descrição, a carga horária solicitada e o tipo de atividade.</li>
+<li>O sistema cria uma Atividade Complementar com status PENDENTE.</li>
+<li>O coordenador visualiza a atividade pendente no dashboard do coordenador.</li>
+<li>O coordenador aprova ou reprova a atividade externa.</li>
+<li>O sistema atualiza o status da atividade e, em caso de aprovação, calcula a carga horária validada.</li>
+</ol>
 <hr />
-<h2 id="fluxos-alternativos">🔁 Fluxos Alternativos<a class="headerlink" href="#fluxos-alternativos" title="Permanent link">&para;</a></h2>
+<h2 id="fluxos-alternativos">Fluxos Alternativos<a class="headerlink" href="#fluxos-alternativos" title="Permanent link">&para;</a></h2>
 <h3 id="dados-invalidos">Dados inválidos<a class="headerlink" href="#dados-invalidos" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Sistema solicita correção dos dados</li>
+<li>Se o aluno enviar descrição ou carga horária inválida, o sistema exibe mensagem de erro e solicita correção.</li>
 </ul>
-<h3 id="falha-no-upload">Falha no upload<a class="headerlink" href="#falha-no-upload" title="Permanent link">&para;</a></h3>
+<h3 id="usuario-nao-autenticado">Usuário não autenticado<a class="headerlink" href="#usuario-nao-autenticado" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Sistema exibe erro e solicita novo envio</li>
+<li>Se um usuário sem sessão tentar acessar a página de cadastro, ele é redirecionado para a página de login.</li>
+</ul>
+<h3 id="atividade-reprovada">Atividade reprovada<a class="headerlink" href="#atividade-reprovada" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Se o coordenador reprovar a atividade, o sistema define o status como REPROVADO, registra a justificativa e não adiciona horas ao aluno.</li>
 </ul>
 <hr />
-<h2 id="pos-condicoes">✅ Pós-condições<a class="headerlink" href="#pos-condicoes" title="Permanent link">&para;</a></h2>
+<h2 id="pos-condicoes">Pós-condições<a class="headerlink" href="#pos-condicoes" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Atividade cadastrada no sistema</li>
-<li>Atividade aguardando validação</li>
+<li>A atividade externa fica registrada no sistema com status PENDENTE.</li>
+<li>O coordenador pode aprovar ou reprovar a solicitação.</li>
+<li>O total de horas validado do aluno será atualizado somente após aprovação.</li>
 </ul>
 
 

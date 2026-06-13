@@ -18,7 +18,7 @@
     
     
       
-        <title>Brainstorm - Atividades Acadêmicas Complementares - PBE_25.2_8003</title>
+        <title>Brainstorm - Projeto AAC_Refeito - PBE_25.2_8003</title>
       
     
     
@@ -108,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Brainstorm - Atividades Acadêmicas Complementares
+              Brainstorm - Projeto AAC_Refeito
             
           </span>
         </div>
@@ -326,7 +326,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../Disciplina/bibliografia.md" class="md-tabs__link">
+      <a href="../../Disciplina/bibliografia/" class="md-tabs__link">
         
   
     
@@ -563,7 +563,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../mapa_mental.md" class="md-nav__link">
+      <a href="../mapamental/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -980,7 +980,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Disciplina/bibliografia.md" class="md-nav__link">
+      <a href="../../Disciplina/bibliografia/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1011,96 +1011,74 @@
   
 
 
-  <h1>Brainstorm - Atividades Acadêmicas Complementares</h1>
+  <h1>Brainstorm - Projeto AAC_Refeito</h1>
 
 <h2 id="introducao">Introdução<a class="headerlink" href="#introducao" title="Permanent link">&para;</a></h2>
 <p align = "justify">
-O brainstorm é uma técnica de elicitação de requisitos que consiste em reunir a equipe para discutir ideias sobre o projeto. Neste contexto, foi utilizado para levantar funcionalidades e características de uma solução voltada à gestão de atividades acadêmicas complementares, incentivando a participação de todos sem julgamentos.
+O brainstorm documenta as principais decisões da equipe para o projeto AAC_Refeito, um sistema para gerenciar Atividades Acadêmicas Complementares via backend Django e APIs REST.
 </p>
 
 <h2 id="metodologia">Metodologia<a class="headerlink" href="#metodologia" title="Permanent link">&para;</a></h2>
 <p align = "justify">
-A equipe se reuniu de forma remota para debater ideias sobre o sistema de atividades acadêmicas complementares. A sessão teve início com perguntas norteadoras e contou com um moderador responsável por conduzir a discussão e registrar as contribuições dos participantes.
+A equipe analisou o código existente em `src/backend/AAC_Refeito` e gerou ideias para os três perfis de usuário: aluno, coordenador e organização acadêmica. O brainstorm focou em funcionalidades reais e no escopo do backend implementado.
 </p>
 
-<h2 id="brainstorm">Brainstorm<a class="headerlink" href="#brainstorm" title="Permanent link">&para;</a></h2>
-<h2 id="versao-10">Versão 1.0<a class="headerlink" href="#versao-10" title="Permanent link">&para;</a></h2>
-<h2 id="perguntas">Perguntas<a class="headerlink" href="#perguntas" title="Permanent link">&para;</a></h2>
-<h3 id="1-qual-o-objetivo-principal-da-aplicacao">1. Qual o objetivo principal da aplicação?<a class="headerlink" href="#1-qual-o-objetivo-principal-da-aplicacao" title="Permanent link">&para;</a></h3>
+<h2 id="principais-ideias-levantadas">Principais ideias levantadas<a class="headerlink" href="#principais-ideias-levantadas" title="Permanent link">&para;</a></h2>
+<h3 id="objetivo-principal-da-aplicacao">Objetivo principal da aplicação<a class="headerlink" href="#objetivo-principal-da-aplicacao" title="Permanent link">&para;</a></h3>
 <p align = "justify">
-<b>Aluno 1</b> - Deve ser uma plataforma onde os estudantes possam registrar suas atividades complementares.
+<b>Aluno 1</b> - Permitir que estudantes registrem atividades acadêmicas complementares e consultem o andamento de suas horas.
 
-<b>Aluno 2</b> - A plataforma deve permitir acompanhar a carga horária exigida pelo curso.
+<b>Aluno 2</b> - Oferecer um painel de progresso com horas integralizadas, meta e atividades pendentes.
 
-<b>Aluno 3</b> - O objetivo é facilitar a organização das atividades realizadas ao longo da graduação.
+<b>Aluno 3</b> - Registrar atividades externas e internas com categorização por tipo de atividade.
 
-<b>Aluno 4</b> - O sistema deve auxiliar na validação das atividades pela coordenação.
+<b>Aluno 4</b> - Dar à coordenação um fluxo de aprovação/reprovação de atividades externas.
 
-<b>Aluno 5</b> - A plataforma deve centralizar todas as informações acadêmicas complementares.
+<b>Aluno 5</b> - Disponibilizar uma organização acadêmica para cadastrar atividades internas e acompanhar participantes.
 </p>
 
 <hr />
-<h3 id="2-como-sera-o-processo-para-cadastrar-um-novo-usuario">2. Como será o processo para cadastrar um novo usuário?<a class="headerlink" href="#2-como-sera-o-processo-para-cadastrar-um-novo-usuario" title="Permanent link">&para;</a></h3>
+<h3 id="cadastro-de-usuarios-e-perfis">Cadastro de usuários e perfis<a class="headerlink" href="#cadastro-de-usuarios-e-perfis" title="Permanent link">&para;</a></h3>
 <p align = "justify">
-<b>Aluno 1</b> - O usuário deverá criar uma conta com dados pessoais e acadêmicos.
+<b>Aluno 1</b> - Usuários são criados com perfis separados para Aluno, Coordenador e Organização Acadêmica.
 
-<b>Aluno 2</b> - O sistema pode integrar com o login institucional.
+<b>Aluno 2</b> - A autenticação usa o login padrão do Django, com redirecionamento para dashboards específicos.
 
-<b>Aluno 3</b> - Após o cadastro, o usuário poderá acessar suas atividades.
-
-<b>Aluno 4</b> - Deve haver validação de e-mail para segurança.
-
-<b>Aluno 5</b> - O perfil deve incluir curso e período.
+<b>Aluno 3</b> - O perfil contém informações de matrícula, curso e tipo de usuário.
 </p>
 
 <hr />
-<h3 id="3-como-sera-a-forma-de-adicionar-atividades">3. Como será a forma de adicionar atividades?<a class="headerlink" href="#3-como-sera-a-forma-de-adicionar-atividades" title="Permanent link">&para;</a></h3>
+<h3 id="cadastro-de-atividades">Cadastro de atividades<a class="headerlink" href="#cadastro-de-atividades" title="Permanent link">&para;</a></h3>
 <p align = "justify">
-<b>Aluno 1</b> - O aluno poderá cadastrar atividades manualmente.
+<b>Aluno 1</b> - Alunos cadastram atividades externas com descrição, carga horária e tipo de atividade.
 
-<b>Aluno 2</b> - Deve ser possível anexar certificados.
+<b>Aluno 2</b> - Coordenadores e organizações cadastram atividades internas que podem ser participadas pelos alunos.
 
-<b>Aluno 3</b> - As atividades devem ter categorias (ensino, pesquisa, extensão).
-
-<b>Aluno 4</b> - O sistema deve permitir editar ou excluir atividades.
+<b>Aluno 3</b> - Cada atividade interna tem título, descrição, carga horária e tipo de atividade.
 </p>
 
 <hr />
-<h3 id="4-outras-perguntas-pertinentes-ao-contexto">4. Outras perguntas pertinentes ao contexto<a class="headerlink" href="#4-outras-perguntas-pertinentes-ao-contexto" title="Permanent link">&para;</a></h3>
+<h3 id="validacao-de-atividades">Validação de atividades<a class="headerlink" href="#validacao-de-atividades" title="Permanent link">&para;</a></h3>
 <p align = "justify">
-<b>Aluno 1</b> - O sistema pode enviar notificações sobre prazos.
+<b>Aluno 1</b> - Coordenadores analisam atividades externas pendentes e podem aprovar ou reprovar.
 
-<b>Aluno 2</b> - Deve haver um painel com progresso da carga horária.
+<b>Aluno 2</b> - O sistema registra a decisão em um objeto de validação e atualiza a carga horária validada do aluno.
 
-<b>Aluno 3</b> - A coordenação pode validar ou recusar atividades.
-
-<b>Aluno 4</b> - Relatórios podem ser gerados automaticamente.
+<b>Aluno 3</b> - Atividades reprovadas recebem feedback do coordenador e ficam com status de rejeitado.
 </p>
 
 <hr />
-<h3 id="5-como-sera-a-validacao-das-atividades">5. Como será a validação das atividades?<a class="headerlink" href="#5-como-sera-a-validacao-das-atividades" title="Permanent link">&para;</a></h3>
+<h3 id="informacoes-importantes-para-o-usuario">Informações importantes para o usuário<a class="headerlink" href="#informacoes-importantes-para-o-usuario" title="Permanent link">&para;</a></h3>
 <p align = "justify">
-<b>Aluno 1</b> - A coordenação irá analisar os certificados enviados.
+<b>Aluno 1</b> - O aluno precisa ver total de horas integralizadas e percentual da meta.
 
-<b>Aluno 2</b> - O sistema pode indicar atividades pendentes.
+<b>Aluno 2</b> - O coordenador deve ver atividades pendentes e o resultado das análises.
 
-<b>Aluno 3</b> - Deve haver feedback em caso de rejeição.
+<b>Aluno 3</b> - A organização deve acompanhar as atividades internas que cadastrou e seus participantes.
 </p>
 
 <hr />
-<h3 id="6-quais-informacoes-seriam-interessantes-para-o-usuario">6. Quais informações seriam interessantes para o usuário?<a class="headerlink" href="#6-quais-informacoes-seriam-interessantes-para-o-usuario" title="Permanent link">&para;</a></h3>
-<p align = "justify">
-<b>Aluno 1</b> - Total de horas concluídas.
-
-<b>Aluno 2</b> - Atividades pendentes e aprovadas.
-
-<b>Aluno 3</b> - Histórico completo das atividades.
-
-<b>Aluno 4</b> - Regras e diretrizes da instituição.
-</p>
-
-<hr />
-<h3 id="requisitos-elicitados">Requisitos elicitados<a class="headerlink" href="#requisitos-elicitados" title="Permanent link">&para;</a></h3>
+<h3 id="requisitos-elicitados-atuais">Requisitos elicitados atuais<a class="headerlink" href="#requisitos-elicitados-atuais" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
@@ -1111,74 +1089,54 @@ A equipe se reuniu de forma remota para debater ideias sobre o sistema de ativid
 <tbody>
 <tr>
 <td>BS01</td>
-<td>O sistema deve permitir cadastro de usuários</td>
+<td>O sistema deve permitir autenticação de usuários por perfil.</td>
 </tr>
 <tr>
 <td>BS02</td>
-<td>O sistema deve permitir login de usuários</td>
+<td>O sistema deve tratar perfis de Aluno, Coordenador e Organização Acadêmica.</td>
 </tr>
 <tr>
 <td>BS03</td>
-<td>O usuário deve cadastrar atividades</td>
+<td>O aluno deve cadastrar atividades externas.</td>
 </tr>
 <tr>
 <td>BS04</td>
-<td>O usuário deve anexar comprovantes</td>
+<td>O sistema deve permitir cadastro de atividades internas por coordenador ou organização.</td>
 </tr>
 <tr>
 <td>BS05</td>
-<td>O sistema deve categorizar atividades</td>
+<td>O aluno deve participar de atividades internas disponíveis.</td>
 </tr>
 <tr>
 <td>BS06</td>
-<td>O sistema deve exibir carga horária</td>
+<td>O coordenador deve aprovar ou reprovar atividades externas.</td>
 </tr>
 <tr>
 <td>BS07</td>
-<td>O sistema deve permitir edição de atividades</td>
+<td>O sistema deve calcular e atualizar total de horas validadas.</td>
 </tr>
 <tr>
 <td>BS08</td>
-<td>O sistema deve permitir exclusão de atividades</td>
+<td>O aluno deve visualizar seu painel de horas e atividades.</td>
 </tr>
 <tr>
 <td>BS09</td>
-<td>O sistema deve gerar relatórios</td>
+<td>Deve haver uma API REST para gerenciar usuários, atividades e validações.</td>
 </tr>
 <tr>
 <td>BS10</td>
-<td>A coordenação deve validar atividades</td>
-</tr>
-<tr>
-<td>BS11</td>
-<td>O sistema deve enviar notificações</td>
-</tr>
-<tr>
-<td>BS12</td>
-<td>O sistema deve exibir status das atividades</td>
-</tr>
-<tr>
-<td>BS13</td>
-<td>O sistema deve armazenar histórico</td>
-</tr>
-<tr>
-<td>BS14</td>
-<td>O sistema deve apresentar regras da instituição</td>
-</tr>
-<tr>
-<td>BS15</td>
-<td>O sistema deve fornecer feedback de validação</td>
+<td>As atividades devem ser categorizadas por tipo de atividade e eixo temático.</td>
 </tr>
 </tbody>
 </table>
 <h2 id="conclusao">Conclusão<a class="headerlink" href="#conclusao" title="Permanent link">&para;</a></h2>
 <p align = "justify">
-A aplicação da técnica de brainstorm permitiu levantar ideias importantes e definir requisitos iniciais para o desenvolvimento de um sistema de gestão de atividades acadêmicas complementares.
+O brainstorm consolidou o escopo do projeto AAC_Refeito em torno de três perfis e de funcionalidades que já existem no backend atual. A documentação futura deve focar em APIs, fluxos de aprovação e no cálculo de horas validadas.
 </p>
 
 <h2 id="referencias-bibliograficas">Referências Bibliográficas<a class="headerlink" href="#referencias-bibliograficas" title="Permanent link">&para;</a></h2>
 <blockquote>
-<p>BARBOSA, S. D. J; DA SILVA, B. S. Interação humano-computador. Elsevier, 2010.</p>
+<p>Django REST Framework. Disponível em: https://www.django-rest-framework.org/  </p>
 </blockquote>
 <h2 id="autores">Autor(es)<a class="headerlink" href="#autores" title="Permanent link">&para;</a></h2>
 <table>
@@ -1192,10 +1150,10 @@ A aplicação da técnica de brainstorm permitiu levantar ideias importantes e d
 </thead>
 <tbody>
 <tr>
-<td>29/03/2026</td>
-<td>1.0</td>
-<td>Criação do documento</td>
-<td>Equipe</td>
+<td>13/06/2026</td>
+<td>1.1</td>
+<td>Atualização para o projeto AAC_Refeito</td>
+<td>Miguel, Maria Luisa e Bento</td>
 </tr>
 </tbody>
 </table>

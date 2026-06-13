@@ -22,7 +22,7 @@
     
     
       
-        <title>5W2H - Atividades Acadêmicas Complementares - PBE_25.2_8003</title>
+        <title>5W2H - Projeto AAC_Refeito - PBE_25.2_8003</title>
       
     
     
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              5W2H - Atividades Acadêmicas Complementares
+              5W2H - Projeto AAC_Refeito
             
           </span>
         </div>
@@ -332,7 +332,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../Disciplina/bibliografia.md" class="md-tabs__link">
+      <a href="../../Disciplina/bibliografia/" class="md-tabs__link">
         
   
     
@@ -578,36 +578,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#versao-10" class="md-nav__link">
+  <a href="#visao-do-produto" class="md-nav__link">
     <span class="md-ellipsis">
-      Versão 1.0
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#visao-geral" class="md-nav__link">
-    <span class="md-ellipsis">
-      Visão geral
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#versao-20" class="md-nav__link">
-    <span class="md-ellipsis">
-      Versão 2.0
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#visao-produto" class="md-nav__link">
-    <span class="md-ellipsis">
-      Visão produto
+      Visão do Produto
     </span>
   </a>
   
@@ -615,6 +588,15 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#funcionalidades-principais" class="md-nav__link">
+    <span class="md-ellipsis">
+      Funcionalidades Principais
+    </span>
+  </a>
   
 </li>
       
@@ -703,7 +685,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../mapa_mental.md" class="md-nav__link">
+      <a href="../mapamental/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1120,7 +1102,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Disciplina/bibliografia.md" class="md-nav__link">
+      <a href="../../Disciplina/bibliografia/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1155,28 +1137,16 @@
 
 <h2 id="introducao">Introdução<a class="headerlink" href="#introducao" title="Permanent link">&para;</a></h2>
 <p align = "justify">
-    O 5W2H é uma ferramenta administrativa que auxilia no planejamento e execução de ações por meio de perguntas estratégicas. Neste contexto, será aplicado para organizar e orientar a realização das atividades acadêmicas complementares, permitindo maior clareza nos objetivos, responsabilidades e processos envolvidos.
+    O 5W2H descreve o planejamento do projeto AAC_Refeito, um backend Django para gerenciar Atividades Acadêmicas Complementares com perfis de aluno, coordenador e organização.
 </p>
 
 <h2 id="metodologia">Metodologia<a class="headerlink" href="#metodologia" title="Permanent link">&para;</a></h2>
 <p align = "justify">
-    A equipe definiu os principais objetivos relacionados às atividades acadêmicas complementares e, a partir disso, estruturou as respostas com base nas perguntas do 5W2H, visando melhor organização e acompanhamento das ações.
+    A equipe mapeará o código atual em `src/backend/AAC_Refeito` para alinhar os objetivos do projeto com as funcionalidades implementadas: autenticação, cadastro de atividades, aprovação e validação de horas.
 </p>
 
 <h2 id="questoes-5w2h">Questões 5W2H<a class="headerlink" href="#questoes-5w2h" title="Permanent link">&para;</a></h2>
-<h3 id="versao-10">Versão 1.0<a class="headerlink" href="#versao-10" title="Permanent link">&para;</a></h3>
-<h3 id="visao-geral">Visão geral<a class="headerlink" href="#visao-geral" title="Permanent link">&para;</a></h3>
-<p>|Questão|Resposta|
-|What? (O que será feito?)  Criação de um sistema para gerenciar e acompanhar atividades acadêmicas complementares dentro da instituição IBMEC
-|Why? (Por que isso será feito?)    Para otimizar o controle das horas complementares, diminuindo processos manuais e melhorando a organização
-|Where? (Onde será feito?)  O desenvolvimento será realizado remotamente pela equipe e aplicado na instituição IBMEC
-|When? (Quando será feito?) Ao longo do primeiro semestre de 2026
-|Who? (Quem irá fazer?) Equipe formada por Miguel, Maria luisa e Bento
-|How? (Como será feito?)    Utilizando metodologia RUP/UP com suporte de tecnologias como Python, Git e VS Code
-|How Much? (Quanto custará?)    O custo será baseado no tempo e dedicação da equipe no desenvolvimento do sistema</p>
-<hr />
-<h3 id="versao-20">Versão 2.0<a class="headerlink" href="#versao-20" title="Permanent link">&para;</a></h3>
-<h3 id="visao-produto">Visão produto<a class="headerlink" href="#visao-produto" title="Permanent link">&para;</a></h3>
+<h3 id="visao-do-produto">Visão do Produto<a class="headerlink" href="#visao-do-produto" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
@@ -1186,37 +1156,50 @@
 </thead>
 <tbody>
 <tr>
-<td>What? (O que será feito?)  Desenvolvimento de um sistema back-end que permita registrar atividades, enviar comprovantes e acompanhar horas acumuladas</td>
-<td></td>
+<td>What? (O que será feito?)</td>
+<td>Desenvolvimento de um backend em Django e Django REST Framework para gerenciar Atividades Acadêmicas Complementares, com APIs e dashboards simples.</td>
 </tr>
 <tr>
-<td>Why? (Por que isso será feito?)    Para facilitar a gestão e validação das atividades complementares dos alunos de forma mais eficiente</td>
-<td></td>
+<td>Why? (Por que isso será feito?)</td>
+<td>Para facilitar o registro, validação e acompanhamento de horas complementares em um único sistema.</td>
 </tr>
 <tr>
-<td>Where? (Onde será feito?)  Implementado em um ambiente de servidor back-end</td>
-<td></td>
+<td>Where? (Onde será feito?)</td>
+<td>No módulo <code>src/backend/AAC_Refeito</code>, com rotas web em <code>core.urls</code> e API em <code>core.api_urls</code>.</td>
 </tr>
 <tr>
-<td>When? (Quando será feito?) Finalizado até o fim do primeiro semestre de 2026</td>
-<td></td>
+<td>When? (Quando será feito?)</td>
+<td>Durante o semestre de 2026, com documentação finalizada para <code>mkdocs gh-deploy</code>.</td>
 </tr>
 <tr>
-<td>Who? (Quem irá fazer?) Desenvolvido pela equipe do projeto</td>
-<td></td>
+<td>Who? (Quem irá fazer?)</td>
+<td>Equipe de desenvolvimento composta por Miguel, Maria Luisa e Bento.</td>
 </tr>
 <tr>
-<td>How Much? (Quanto custará?)    O investimento será relacionado ao esforço técnico e tempo de desenvolvimento da equipe</td>
-<td></td>
+<td>How? (Como será feito?)</td>
+<td>Usando Python, Django, DRF, HTML/CSS e documentação MkDocs; o trabalho será gerenciado via Git.</td>
+</tr>
+<tr>
+<td>How Much? (Quanto custará?)</td>
+<td>O investimento é principalmente em horas de trabalho e revisão do projeto, sem custo adicional de infraestrutura na fase atual.</td>
 </tr>
 </tbody>
 </table>
+<h2 id="funcionalidades-principais">Funcionalidades Principais<a class="headerlink" href="#funcionalidades-principais" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Cadastro e autenticação de usuários com perfis: Aluno, Coordenador e Organização Acadêmica.</li>
+<li>Registro de atividades externas pelo aluno.</li>
+<li>Cadastro de atividades internas por coordenador ou organização.</li>
+<li>Aprovação e reprovação de atividades externas pelo coordenador.</li>
+<li>Cálculo de horas integralizadas aprovadas e painel de controle para o aluno.</li>
+<li>API REST para gerenciar usuários, atividades e validações.</li>
+</ul>
 <h2 id="conclusao">Conclusão<a class="headerlink" href="#conclusao" title="Permanent link">&para;</a></h2>
-<p>O uso da ferramenta 5W2H permite uma melhor organização das atividades acadêmicas complementares, facilitando o planejamento, execução e acompanhamento. Dessa forma, contribui para uma formação mais completa e estruturada dos estudantes.</p>
+<p>O 5W2H demonstra que o AAC_Refeito é um projeto backend centrado na gestão de AACs, com foco em automação de processos e documentação para deploy. A documentação deve apoiar a entrega do código existente e facilitar o uso do sistema pelo público acadêmico.</p>
 <h2 id="referencias-bibliograficas">Referências Bibliográficas<a class="headerlink" href="#referencias-bibliograficas" title="Permanent link">&para;</a></h2>
 <blockquote>
-<p>5W2H: disponível em: https://www.exemplo.com<br />
-Importância das atividades complementares: disponível em: https://www.exemplo.com  </p>
+<p>Django. Disponível em: https://www.djangoproject.com/<br />
+Django REST Framework. Disponível em: https://www.django-rest-framework.org/  </p>
 </blockquote>
 <h2 id="autores">Autor(es)<a class="headerlink" href="#autores" title="Permanent link">&para;</a></h2>
 <table>
@@ -1230,16 +1213,10 @@ Importância das atividades complementares: disponível em: https://www.exemplo.
 </thead>
 <tbody>
 <tr>
-<td>29/03/2026</td>
-<td>1.0</td>
-<td>Criação do documento</td>
-<td>Autor</td>
-</tr>
-<tr>
-<td>29/03/2026</td>
-<td>2.0</td>
-<td>Adaptação para visão produto</td>
-<td>Autor</td>
+<td>13/06/2026</td>
+<td>2.1</td>
+<td>Atualização para refletir o projeto AAC_Refeito atual</td>
+<td>Miguel, Maria Luisa e Bento</td>
 </tr>
 </tbody>
 </table>

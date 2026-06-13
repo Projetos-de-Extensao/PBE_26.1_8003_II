@@ -22,7 +22,7 @@
     
     
       
-        <title>Diagrama de Casos de Uso - PBE_25.2_8003</title>
+        <title>Diagrama de Classes - PBE_25.2_8003</title>
       
     
     
@@ -79,7 +79,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#casos-de-uso" class="md-skip">
+        <a href="#diagrama-de-classes-projeto-aac_refeito" class="md-skip">
           Skip to content
         </a>
       
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Diagrama de Casos de Uso
+              Diagrama de Classes
             
           </span>
         </div>
@@ -332,7 +332,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../Disciplina/bibliografia.md" class="md-tabs__link">
+      <a href="../../Disciplina/bibliografia/" class="md-tabs__link">
         
   
     
@@ -569,7 +569,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Iniciacao/mapa_mental.md" class="md-nav__link">
+      <a href="../../Iniciacao/mapamental/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -734,6 +734,8 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
@@ -762,6 +764,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -770,44 +774,38 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#casos-de-uso" class="md-nav__link">
+  <a href="#visao-geral" class="md-nav__link">
     <span class="md-ellipsis">
-      Casos de Uso
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Casos de Uso">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#descricao" class="md-nav__link">
-    <span class="md-ellipsis">
-      Descrição:
+      Visão Geral
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#criacao-de-uma-conta-no-sistema" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#diagrama-de-classes-simplificado" class="md-nav__link">
     <span class="md-ellipsis">
-      Criação de uma conta no sistema
+      Diagrama de Classes Simplificado
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#entrada-do-usuario-no-sistema" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#descricao-das-classes" class="md-nav__link">
     <span class="md-ellipsis">
-      Entrada do usuário no sistema
+      Descrição das Classes
     </span>
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#observacoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Observações
+    </span>
+  </a>
   
 </li>
       
@@ -1066,7 +1064,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Disciplina/bibliografia.md" class="md-nav__link">
+      <a href="../../Disciplina/bibliografia/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1097,148 +1095,107 @@
   
 
 
-  <h1>Diagrama de Classes</h1>
-
-<h2 id="casos-de-uso">Casos de Uso<a class="headerlink" href="#casos-de-uso" title="Permanent link">&para;</a></h2>
-<h3 id="descricao">Descrição:<a class="headerlink" href="#descricao" title="Permanent link">&para;</a></h3>
+<h1 id="diagrama-de-classes-projeto-aac_refeito">Diagrama de Classes - Projeto AAC_Refeito<a class="headerlink" href="#diagrama-de-classes-projeto-aac_refeito" title="Permanent link">&para;</a></h1>
+<h2 id="visao-geral">Visão Geral<a class="headerlink" href="#visao-geral" title="Permanent link">&para;</a></h2>
+<p>O sistema AAC_Refeito foi modelado com os seguintes principais objetos:</p>
 <ul>
-<li>
-<p>Contas</p>
+<li><code>Usuario</code> (customizado, herdado de <code>AbstractUser</code>)</li>
+<li><code>Aluno</code></li>
+<li><code>Coordenador</code></li>
+<li><code>OrgAcademica</code></li>
+<li><code>EixoTematico</code></li>
+<li><code>TipoAtividade</code></li>
+<li><code>AtividadeComplementar</code></li>
+<li><code>AtividadeInterna</code></li>
+<li><code>Validacao</code></li>
+</ul>
+<h2 id="diagrama-de-classes-simplificado">Diagrama de Classes Simplificado<a class="headerlink" href="#diagrama-de-classes-simplificado" title="Permanent link">&para;</a></h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>classDiagram
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    class Usuario {
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>        +String username
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>        +String email
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>        +String perfil
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    }
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    class Aluno {
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>        +String matricula
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>        +String curso
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>        +int semestre_ingresso
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>        +int total_horas_integralizadas
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>        +atualizar_total_horas()
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>    }
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>    class Coordenador {
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>        +String sia_funcionario
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>    }
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>    class OrgAcademica {
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>        +String nome_entidade
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>        +String cargo_representante
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>    }
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>    class EixoTematico {
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>        +String nome
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>        +String descricao
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>    }
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>    class TipoAtividade {
+</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>        +String nome
+</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>        +int limite_horas_total
+</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>        +int limite_horas_por_evento
+</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a>    }
+</span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a>    class AtividadeComplementar {
+</span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a>        +String descricao
+</span><span id="__span-0-32"><a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a>        +Date data_realizacao
+</span><span id="__span-0-33"><a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a>        +int carga_horaria_solicitada
+</span><span id="__span-0-34"><a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a>        +int carga_horaria_validada
+</span><span id="__span-0-35"><a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a>        +String status
+</span><span id="__span-0-36"><a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a>        +String tipo_origem
+</span><span id="__span-0-37"><a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a>        +String caminho_comprovante
+</span><span id="__span-0-38"><a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a>        +String feedback
+</span><span id="__span-0-39"><a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a>        +DateTime criado_em
+</span><span id="__span-0-40"><a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a>        +DateTime atualizado_em
+</span><span id="__span-0-41"><a id="__codelineno-0-41" name="__codelineno-0-41" href="#__codelineno-0-41"></a>        +aprovar()
+</span><span id="__span-0-42"><a id="__codelineno-0-42" name="__codelineno-0-42" href="#__codelineno-0-42"></a>        +reprovar()
+</span><span id="__span-0-43"><a id="__codelineno-0-43" name="__codelineno-0-43" href="#__codelineno-0-43"></a>    }
+</span><span id="__span-0-44"><a id="__codelineno-0-44" name="__codelineno-0-44" href="#__codelineno-0-44"></a>    class AtividadeInterna {
+</span><span id="__span-0-45"><a id="__codelineno-0-45" name="__codelineno-0-45" href="#__codelineno-0-45"></a>        +String titulo
+</span><span id="__span-0-46"><a id="__codelineno-0-46" name="__codelineno-0-46" href="#__codelineno-0-46"></a>        +String descricao
+</span><span id="__span-0-47"><a id="__codelineno-0-47" name="__codelineno-0-47" href="#__codelineno-0-47"></a>        +int carga_horaria
+</span><span id="__span-0-48"><a id="__codelineno-0-48" name="__codelineno-0-48" href="#__codelineno-0-48"></a>        +DateTime criado_em
+</span><span id="__span-0-49"><a id="__codelineno-0-49" name="__codelineno-0-49" href="#__codelineno-0-49"></a>    }
+</span><span id="__span-0-50"><a id="__codelineno-0-50" name="__codelineno-0-50" href="#__codelineno-0-50"></a>    class Validacao {
+</span><span id="__span-0-51"><a id="__codelineno-0-51" name="__codelineno-0-51" href="#__codelineno-0-51"></a>        +String resultado
+</span><span id="__span-0-52"><a id="__codelineno-0-52" name="__codelineno-0-52" href="#__codelineno-0-52"></a>        +int carga_horaria_validada
+</span><span id="__span-0-53"><a id="__codelineno-0-53" name="__codelineno-0-53" href="#__codelineno-0-53"></a>        +String justificativa
+</span><span id="__span-0-54"><a id="__codelineno-0-54" name="__codelineno-0-54" href="#__codelineno-0-54"></a>        +DateTime data_analise
+</span><span id="__span-0-55"><a id="__codelineno-0-55" name="__codelineno-0-55" href="#__codelineno-0-55"></a>    }
+</span><span id="__span-0-56"><a id="__codelineno-0-56" name="__codelineno-0-56" href="#__codelineno-0-56"></a>
+</span><span id="__span-0-57"><a id="__codelineno-0-57" name="__codelineno-0-57" href="#__codelineno-0-57"></a>    Usuario &lt;|-- Aluno
+</span><span id="__span-0-58"><a id="__codelineno-0-58" name="__codelineno-0-58" href="#__codelineno-0-58"></a>    Usuario &lt;|-- Coordenador
+</span><span id="__span-0-59"><a id="__codelineno-0-59" name="__codelineno-0-59" href="#__codelineno-0-59"></a>    Usuario &lt;|-- OrgAcademica
+</span><span id="__span-0-60"><a id="__codelineno-0-60" name="__codelineno-0-60" href="#__codelineno-0-60"></a>    Aluno &quot;1&quot; -- &quot;*&quot; AtividadeComplementar : aluno
+</span><span id="__span-0-61"><a id="__codelineno-0-61" name="__codelineno-0-61" href="#__codelineno-0-61"></a>    Coordenador &quot;1&quot; -- &quot;*&quot; AtividadeComplementar : coordenador
+</span><span id="__span-0-62"><a id="__codelineno-0-62" name="__codelineno-0-62" href="#__codelineno-0-62"></a>    OrgAcademica &quot;1&quot; -- &quot;*&quot; AtividadeComplementar : organizacao
+</span><span id="__span-0-63"><a id="__codelineno-0-63" name="__codelineno-0-63" href="#__codelineno-0-63"></a>    TipoAtividade &quot;1&quot; -- &quot;*&quot; AtividadeComplementar : tipo_atividade
+</span><span id="__span-0-64"><a id="__codelineno-0-64" name="__codelineno-0-64" href="#__codelineno-0-64"></a>    TipoAtividade &quot;1&quot; -- &quot;*&quot; AtividadeInterna : tipo_atividade
+</span><span id="__span-0-65"><a id="__codelineno-0-65" name="__codelineno-0-65" href="#__codelineno-0-65"></a>    OrgAcademica &quot;1&quot; -- &quot;*&quot; AtividadeInterna : organizacao
+</span><span id="__span-0-66"><a id="__codelineno-0-66" name="__codelineno-0-66" href="#__codelineno-0-66"></a>    Coordenador &quot;1&quot; -- &quot;*&quot; AtividadeInterna : coordenador
+</span><span id="__span-0-67"><a id="__codelineno-0-67" name="__codelineno-0-67" href="#__codelineno-0-67"></a>    Aluno &quot;*&quot; -- &quot;*&quot; AtividadeInterna : participantes
+</span><span id="__span-0-68"><a id="__codelineno-0-68" name="__codelineno-0-68" href="#__codelineno-0-68"></a>    AtividadeComplementar &quot;1&quot; -- &quot;1&quot; Validacao : validacao
+</span></code></pre></div>
+<h2 id="descricao-das-classes">Descrição das Classes<a class="headerlink" href="#descricao-das-classes" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Criação</li>
-<li>Entrada</li>
-<li>Alteração</li>
-<li>Recuperar Senha</li>
-<li>Exclusão Lógica</li>
-<li>Visualização</li>
+<li><code>Usuario</code>: usuário personalizado com o campo <code>perfil</code> (ALUNO, COORDENADOR, ORG).</li>
+<li><code>Aluno</code>: armazena matrícula, curso, semestre e total de horas integralizadas.</li>
+<li><code>Coordenador</code>: representa o usuário que analisa atividades externas.</li>
+<li><code>OrgAcademica</code>: representa a organização responsável por cadastrar atividades internas.</li>
+<li><code>EixoTematico</code>: define uma categoria geral para tipos de atividade.</li>
+<li><code>TipoAtividade</code>: define limites de horas e pertence a um eixo temático.</li>
+<li><code>AtividadeComplementar</code>: representa atividades externas solicitadas por alunos e validadas por coordenadores.</li>
+<li><code>AtividadeInterna</code>: representa atividades lançadas por coordenadores ou organizações e com participantes.</li>
+<li><code>Validacao</code>: registra resultado, carga validada e justificativa das análises de atividades complementares.</li>
 </ul>
-</li>
-<li>
-<p>Perfis</p>
+<h2 id="observacoes">Observações<a class="headerlink" href="#observacoes" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Edição</li>
-<li>Pesquisar</li>
-<li>Visualização</li>
-<li>Seguir/Deixar de Seguir</li>
-</ul>
-</li>
-<li>
-<p>Postagens (Público)       </p>
-<ul>
-<li>Criação</li>
-<li>Exclusão</li>
-<li>Interação</li>
-<li>Visualização</li>
-</ul>
-</li>
-<li>
-<p>Mensagens (Privado)</p>
-<ul>
-<li>Criação</li>
-<li>Exclusão</li>
-<li>Visualização</li>
-</ul>
-</li>
-<li>
-<p>Galerias</p>
-<ul>
-<li>Albuns</li>
-</ul>
-</li>
-<li>Blogs</li>
-<li>Grupos</li>
-</ul>
-<h3 id="criacao-de-uma-conta-no-sistema">Criação de uma conta no sistema<a class="headerlink" href="#criacao-de-uma-conta-no-sistema" title="Permanent link">&para;</a></h3>
-<ul>
-<li>
-<p>Atores:</p>
-<ul>
-<li>Usuário</li>
-<li>Sistema</li>
-</ul>
-</li>
-<li>
-<p>Pré-Condições:</p>
-<ul>
-<li>Nenhuma</li>
-</ul>
-</li>
-<li>
-<p>Fluxo Básico:</p>
-<ol>
-<li>Usuário fornece e-mail, senha e confirmações</li>
-<li>Dados do Usuário são validados pelo Sistema</li>
-<li>Dados do Usuário são encriptados pelo Sistema</li>
-<li>Dados do Usuário são persistidos pelo Sistema</li>
-<li>Sistema gera um link com prazo de expiração</li>
-<li>Sistema envia e-mail de verificação, com o link, para o Usuário</li>
-<li>Usuário confirma o e-mail antes do link expirar</li>
-<li>Sistema confirma que o Cadastro do Usuário foi realizado com sucesso</li>
-<li>Sistema redireciona o Usuário para a página de Entrada</li>
-</ol>
-</li>
-<li>
-<p>Fluxos Alternativos:</p>
-<ul>
-<li>2a. E-mail do Usuário é inválido
-    2a1. Sistema exibe mensagem de erro</li>
-<li>2b. Senha do Usuário não respeita regras de segurança<ul>
-<li>2b1. Sistema exibe mensagem de erro</li>
-</ul>
-</li>
-<li>3a. Usuário tenta confirmar o e-mail depois de o link expirar<ul>
-<li>3a1. Sistema sugere que o Usuário realize um novo Cadastro</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="entrada-do-usuario-no-sistema">Entrada do usuário no sistema<a class="headerlink" href="#entrada-do-usuario-no-sistema" title="Permanent link">&para;</a></h3>
-<ul>
-<li>
-<p>Atores:</p>
-<ul>
-<li>Usuário</li>
-<li>Sistema</li>
-</ul>
-</li>
-<li>
-<p>Pré-Condições:
-    Usuário deve estar cadastrado</p>
-</li>
-<li>
-<p>Fluxo Básico:</p>
-<ul>
-<li>
-<ol>
-<li>Usuário fornece e-mail e senha</li>
-</ol>
-</li>
-<li>
-<ol>
-<li>Sistema autentica o Usuário</li>
-</ol>
-</li>
-<li>
-<ol>
-<li>Sistema redireciona o Usuário para a página inicial</li>
-</ol>
-</li>
-</ul>
-</li>
-<li>
-<p>Fluxos Alternativos:</p>
-<ul>
-<li>2a. Dados do Usuário Inválidos<ul>
-<li>2a1. Sistema exibe mensagem de erro</li>
-</ul>
-</li>
-<li>3a. Primeio acesso do Usuário<ul>
-<li>3a1. Sistema redireciona o Usuário para a página de edição de perfil</li>
-</ul>
-</li>
-</ul>
-</li>
+<li>O método <code>Aluno.atualizar_total_horas()</code> calcula o total de horas aprovadas com base nas atividades complementares com status <code>APROVADO</code>.</li>
+<li>O método <code>AtividadeComplementar.aprovar()</code> ajusta a carga validada conforme o limite do tipo de atividade e atualiza o histórico de validação.</li>
+<li><code>AtividadeInterna</code> tem uma relação de muitos-para-muitos com <code>Aluno</code> para registrar participantes.</li>
 </ul>
 
 
